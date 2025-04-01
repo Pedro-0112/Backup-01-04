@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curso de Direito da Faculdade do Futuro - disciplinas e informações.">
+  <title>Curso - Faculdade do Futuro</title>
+  <link rel="icon" href="imagem/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/slider.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel=".json" href="administracao.json">
+</head>
+<body>
+<!-- Loading -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+<!-- Topo Fino -->
+<header class="topo-fino"id="topoFino">
+  <div class="container">
+    <div class="logo">
+      <a href="https://faculdadedofuturo.com.br/" target="_blank">
+        <img src="imagem/LogoFAF.png" loading="lazy" alt="Faculdade do Futuro" >
+      </a>
+    </div>
+    <div class="links">
+      <a href="https://faculdadedofuturo.com.br/">Inicio </a>
+      <span>&gt;</span>
+      <a  id="catalogo">&nbsp;Catálogo</a>
+      <span>&gt;</span>
+      <a class="ativo" href="#">&nbsp;Curso</a>
+        </div>
+    </div>
+  </div>
+</header>
+  <header>
+<!-- Banner -->
+    <div class="banner">
+      <img src="imagem/Educacao_F.jpg" loading="lazy" alt="Banner Direito">
+    </div>
+  </header>
+<!-- Back to top -->
+  <button id="back-to-top" title="Voltar ao topo" class="seta" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0001 6.58571C15.3906 6.97624 15.3906 7.6094 15.0001 7.99992C14.6096 8.39045 13.9764 8.39045 13.5859 7.99993L8.00008 2.41414L2.41429 7.99992C2.02376 8.39045 1.3906 8.39045 1.00008 7.99992C0.609551 7.6094 0.609551 6.97624 1.00008 6.58571L7.15155 0.43424C7.62018 -0.03439 8.37997 -0.03439 8.8486 0.43424L15.0001 6.58571Z" fill="currentColor"></path>
+  </svg></button>
+<!-- COnteudo -->
+  <div class="conteudo">
+    <div class="periodo">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3"> <!--se o titulo for mindo grande troque para (col-sm-4) -->
+            <div class="titulo-interior">
+              <p>2025</p>
+              <h3>Curso</h3>
+              <span>Selecione o Periodo:</span>
+            </div>
+          </div>
+          <div>
+            <div class="lista-periodos" id="lista-periodos">
+              <ul id="periodos">
+                <li>
+                  <nav><a class="link-ancora" href="#primeiro_p" class="col-sm-8  col-md-9" style="padding-top:10" title="Período 1">1º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#segundo_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 2">2º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#terceiro_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 3">3º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#quarto_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 4">4º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#quinto_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 5">5º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#sexto_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 6">6º </a></nav>
+                </li>
+               <li>
+                  <nav><a class="link-ancora" href="#setimo_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 7">7º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#oitavo_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 8">8º </a></nav>
+                </li>
+                <!-- Exlua daqui periodo-->
+                <li>
+                  <nav><a class="link-ancora" href="#nono_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 9">9º </a></nav>
+                </li>
+                <li>
+                  <nav><a class="link-ancora" href="#decimo_p" class="col-sm-8  col-md-9 " style="padding-top:10" title="Período 10">10º </a></nav>
+                </li>
+                <!-- Até aqui -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Disciplinas 1º -->
+<div class="bloco">
+  <section id="primeiro_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_1">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 1º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_1" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_1" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-1" class="detalhes-disciplina" target="_blank"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 2º -->
+<div class="bloco">
+  <section id="segundo_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_2">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 2º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_2" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_2" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-2" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 3º -->
+<div class="bloco">
+  <section id="terceiro_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_3">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 3º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_3" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_3" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-3" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 4º -->
+<div class="bloco">
+  <section id="quarto_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_4">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 4º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_4" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_4" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-4" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 5º -->
+<div class="bloco">
+  <section id="quinto_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_5">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 5º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_5" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_5" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-5" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 6º -->
+<div class="bloco">
+  <section id="sexto_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_6">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 6º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_6" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_6" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-6" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 7º -->
+<div class="bloco">
+  <section id="setimo_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_7">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 7º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_7" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_7" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-7" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 8º -->
+<div class="bloco">
+  <section id="oitavo_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_8">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 8º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_8" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_8" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-8" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!------------------- Exclua daqui periodo -->
+<!-- Disciplinas 9º -->
+<div class="bloco">
+  <section id="nono_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_9">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 9º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_9" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_9" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-9" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+<!-- Disciplinas 10º -->
+<div class="bloco">
+  <section id="decimo_p">
+    <div id="overflow">
+      <div class="inner">
+        <div class="slide slide_10">
+          <div class="slide-content">
+            <div class="disciplinas">
+              <a name="disciplinas">
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-interior">
+                      <h5><a href="#titulo" title="voltar"></a></h5>
+                      <h3>Disciplinas 10º</h3>
+                    </div>
+                  </div>
+                  <div class="disciplinas-blocos">
+                    <div class="row" id="disciplinas">
+                        <div class="bloco" >
+                            <div id="disciplinas_10" class="disciplinas-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                       <div id="slides">
+                           <div class="inner">
+<div class="slide slide_10" id="1D">
+  <div class="slide-content">
+    <div id="detalhes-disciplina-10" class="detalhes-disciplina"></div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                </div>
+         </section>
+       </div>
+
+ <!-- ROdapé -->
+  <footer>
+    <div class="footer-container">
+        <div>
+            <h3>Conheça também</h3>
+            <img width="180" height="80" src="https://faculdadedofuturo.com.br/wp-content/uploads/2021/08/Logo-EF-300x139.png" class="Logo-esc" loading="lazy" alt="Logo Escola do Futuro">
+        </div>
+        <div>
+            <h3>Fale com a gente</h3>
+            <p>Rua Duarte Peixoto 259, Coqueiro, Manhuaçu/MG</p>
+            <p>(33) 3331-1214</p>
+            <p>contato@faculdadedofuturo.edu.br</p>
+        </div>
+        <div>
+            <h3>Integridade e Ética</h3>
+            <p><a href="#">&gt; Termos de Uso</a></p>
+            <p><a href="#">&gt; Política de Privacidade</a></p>
+            <p><a href="#">&gt; Política de Cookies</a></p>
+            <p><a button onclick="mostrarEmail()">> Desenvolvido por:</button></a></p>
+            <p id="email">pedro.silva.ribeiro360@gmail.com</p>
+        </div>
+        <div>
+            <h3>LGPD</h3>
+            <p><a href="https://faculdadedofuturo.com.br/privacidade/">&gt; Lei Geral de Proteção de Dados</a></p>
+        </div>
+    </div>
+</footer>
+<!-- Seção de direitos reservados -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer-copyright">
+                    <span><strong>Faculdade do Futuro © 2025. Todos os direitos reservados.</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <script src="script/jquery-2.1.4.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
+

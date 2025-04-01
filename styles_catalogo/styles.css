@@ -1,0 +1,628 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+html {
+  overflow: scroll;  
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+/* --- */
+
+ /* Estilo do overlay (fundo escuro) */
+ .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.062);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Seus estilos fornecidos */
+.aviso-fixo {
+  background-color: #FFF3CD;
+  border: 1px solid #FFC107;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+
+.aviso-fixo h3 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.aviso-fixo ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+/* Estilos adicionais para os botões */
+.botoes-aviso {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-ok {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #856404;
+}
+
+
+#arquivo-pdf {
+  color: #37b0c0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#arquivo-pdf:hover {
+  color: #0b375c;
+}
+
+/* Topo */
+
+/* Estilos para o Topo Fino */
+.topo-fino {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 35px; /* Altura do topo */
+  background-color: #272727d2; /* Cor de fundo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.568); /* Sombra para destacar */
+  z-index: 20; /* Garante que fique acima de outros elementos */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Espaçamento interno */
+}
+
+.topo-fino .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha à esquerda */
+}
+
+.topo-fino .container .links {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinha à direita */
+}
+
+.topo-fino .logo img {
+  height: 45px; /* Altura da logo */
+  width: auto; /* Largura automática para manter a proporção */
+}
+
+.topo-fino .logo a {
+  text-decoration: none; /* Remove sublinhado do link */
+}
+
+.topo-fino .links {
+  display: flex;
+  align-items: center;
+  gap: 1px; /* Espaço entre os links */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.topo-fino .links a {
+  text-decoration: none;
+  color: #d4d4d4; /* Cor do texto */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.topo-fino .links .ativo{
+  text-decoration: none;
+  color: #ffbc65f3; /* Cor do texto */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.topo-fino .links a:hover {
+  color: #ffbc65f3; /* Cor ao passar o mouse */
+  transform: scale(1.03)
+}
+
+/* Ajuste no conteúdo para não ficar escondido atrás do topo */
+.conteudo {
+  margin-top: 80px; /* Ajuste conforme a altura do topo */
+}
+
+/* Banner */
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65vh; /* Altura do banner para cobrir a tela inteira */
+  z-index: 1; /* Coloca o banner atrás do conteúdo */
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajuste no conteúdo para passar por cima do banner */
+.conteudo {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo na frente do banner */
+  background-color: white; /* Fundo branco para o conteúdo */
+  margin-top: 65vh; /* Margem superior igual à altura do banner */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 855px) {
+  .banner {
+    height: 55vh; /* Reduz a altura do banner em telas menores */
+  }
+
+  .banner img {
+    object-fit: cover; /* Mantém a imagem cobrindo o espaço */
+    object-position: 1.2%; /* Foca na parte esquerda da imagem */
+  }
+  .conteudo {
+    position: relative;
+    z-index: 2; /* Coloca o conteúdo na frente do banner */
+    background-color: white; /* Fundo branco para o conteúdo */
+    margin-top: 28vh; /* Margem superior igual à altura do banner */
+  }
+}
+
+    /* Botão "Ano" fixo no canto direito */
+    #ano-toggle {
+      background: #e6e6e6;
+      font-size: 17px;
+      font-weight: bold;
+      color: #424242;
+      cursor: pointer;
+
+    }
+
+    #ano-toggle::after {
+      content: " ▼"; /* Ícone de seta para baixo */
+    }
+
+    #ano-toggle.ativo::after {
+      content: " ▲"; /* Ícone de seta para cima quando ativo */
+    }
+
+    /* Menu suspenso de anos */
+    #ano-conteudo {
+      position: absolute;
+      top: 105px; /* Posiciona abaixo do botão "Ano" */
+      left: 150px;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      display: none; /* Esconde o conteúdo inicialmente */
+      z-index: 5; /* Garante que fique acima de outros elementos */
+    }
+
+    #ano-conteudo.visivel {
+      display: block; /* Mostra o conteúdo */
+    }
+
+    /* Lista de anos */
+    #ano-conteudo ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #ano-conteudo ul li {
+      margin: 5px 0; /* Espaçamento entre os itens */
+      display: block; /* Garante que cada item fique em uma linha */
+    }
+
+    /* Botões de anos */
+    #ano-conteudo ul li a {
+      display: block;
+      width: 100px; /* Largura fixa para o retângulo */
+      padding: 8px;
+      font-size: 14px;
+      color: #4e4e4e;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      background: hsl(0, 0%, 94%);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    #ano-conteudo ul li a:hover,
+    #ano-conteudo ul li a.ativo {
+      color: #fff;
+      background: #facd52;
+    }
+
+
+  /* Periodos */
+.conteudo .periodo {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  background: #e6e6e6;
+  padding: 25px 0;
+}
+.conteudo .periodo .titulo-interior h3 {
+  padding: 0 0 0 0;
+  font-weight: bold;
+  color: #424242;
+  font-size: 38px;
+  margin: 0;
+  height: 72px;
+  white-space: nowrap;
+}
+.conteudo .periodo .titulo-interior p {
+
+  color: #424242;
+  font-weight: bold;
+  text-transform: uppercase;
+  left: 175px;
+  font-size: 22px;
+}
+.conteudo .periodo .titulo-interior span {
+  position: absolute;
+  color: #f19100;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 45px;
+  left: 15px;
+  font-size: 14px;
+}
+.conteudo .periodo .lista-periodos ul {
+  list-style: none;
+  padding: 100;
+}
+
+/* botões de periodos */
+.conteudo .periodo .lista-periodos ul li a {
+  font-size: 18px;
+  color: #4e4e4e;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle; 
+  text-align: center;
+  background: hsl(0, 0%, 94%);
+}
+.conteudo .periodo .lista-periodos ul li a:hover,
+.conteudo .periodo .lista-periodos ul li a.ativo {
+  color: #fff;
+  background: #facd52;
+}
+li:hover ul { display: block; }
+
+.link-ancora {
+  text-decoration: none;
+  color: #ff9100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.link-ancora:hover {
+  color: #ffc400;
+  transform: scale(1.1);
+}
+.link-ancora.ativo {
+  background: #facd52; /* Cor de fundo para o link ativo */
+  color: #fff; /* Cor do texto para o link ativo */
+}
+
+/* Titulo "Diciplina" */
+.conteudo .disciplinas .titulo-interior h3 {
+  padding-top: 25px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #358285;
+  font-size: 29px;
+  margin: 0 0 30px 23px;
+}
+
+/* Cartões Diciplinas */
+.no-scroll
+.ativo {
+  background: #ff9011; /* Cor de fundo para o link ativo */
+  color: #fff; /* Cor do texto para o link ativo */
+}
+.link-ancora-diciplina {
+  text-decoration: none;
+  color: #ff9100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.link-ancora-diciplina:hover {
+  color: #ffc400;
+  transform: scale(1.01);
+}
+.conteudo .disciplinas {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  padding: 0px 0px 0px;
+}
+.nome-diciplina{
+  color: #248880;
+  font-weight: bold;
+}
+
+/* Diciplinas */
+.conteudo .disciplinas .titulo-interior h5 {
+  height: 42px;
+}
+.conteudo .disciplinas .titulo-interior span {
+  position: absolute;
+  color: #424242;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 400px;
+  left: 97px;
+}
+.conteudo .disciplinas .disciplinas-blocos .bloco a {
+  display: block;
+  background: #e6e6e6;
+  padding: 10px 15px;
+  color: #ff6600;;
+  text-decoration: none;
+  text-transform: uppercase;
+ font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 19px;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  position: relative;
+}
+.conteudo .disciplinas .disciplinas-blocos .bloco a {
+  min-height: 80px;
+}
+.conteudo .periodo .lista-periodos ul li {
+  margin-top: 1%;
+}
+.conteudo .disciplinas .disciplinas-blocos .col-sm-4 {
+  padding-left: 1px;
+  padding-right: 1px ;
+}
+.conteudo .disciplinas .disciplinas-blocos .bloco a span {
+  display: block;
+  color: #2D3E48;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-top: 25px;
+}
+.conteudo .disciplinas .disciplinas-blocos .bloco a:hover,
+.conteudo .disciplinas .disciplinas-blocos .bloco a:hover span,
+.conteudo .disciplinas .disciplinas-blocos .bloco a.ativo,
+.conteudo .disciplinas .disciplinas-blocos .bloco a.ativo span {
+    color: #fff;
+    background: #ffac3f;
+}
+.conteudo .disciplinas #disciplina-titulo {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Informações diciplinas */
+.disciplinas-blocos {
+  margin: 20px;
+}
+.inner .slide strong p {
+  padding-top: 10px;
+}
+#horas {
+  font-size: 15px;
+  color: #272727;
+}
+#ementa {
+  font-size: 15px;
+  color: #272727;}
+#versaopdf {
+  font-size: 15px;
+  color: #313131;}
+
+/* ROdapé */
+footer {
+  background-color: #202020;
+  color: #fff;
+  padding: 30px 0;
+  font-family: "Roboto", Sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container h3 {
+  color: #ff9800;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-container p, a {
+  color: #868686;
+  text-decoration: none;
+}
+
+.Logo-esc {
+  max-width: 160px;
+}
+/* Estilo da seção de direitos reservados */
+.footer-copyright {
+  background-color: #171717; /* Cinza escuro */
+  padding: 20px 20px 20px 20px;
+  margin: 0 -15px 0 -15px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.footer-copyright span {
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Estilo do botão */
+#back-to-top {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  width: 39px; 
+  height: 39px; 
+  border-radius: 50%; 
+  background-color: #e6e6e6; 
+  color: #424242be;
+  border: none; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease; 
+  z-index: 1000; 
+  opacity: 0; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  transform: translateY(20px);
+}
+#back-to-top.show {
+  opacity: 1; /* Torna o botão visível */
+  transform: translateY(0); /* Retorna à posição original */
+}
+#back-to-top:hover {
+  background-color: rgba(61, 61, 61, 0.502); 
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+  transition: transform 1.0s ease, color 0.5s ease;
+}
+
+
+/* Media */
+  /* Estilos para telas menores que 768px (dispositivos móveis) */
+  @media (min-width: 856px) {
+    .topo-fino {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 72.7%;
+      height: 45px; /* Altura do topo */
+      background-color: #272727d2; /* Cor de fundo */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.568); /* Sombra para destacar */
+      z-index: 2; /* Garante que fique acima de outros elementos */
+      display: flex;
+      align-items: center;
+      padding: 0 20px; /* Espaçamento interno */
+    }
+  }
+
+
+@media (max-width: 767px){
+  footer{
+    margin-top: 900px;
+  }
+
+  /* Estilos para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+
+
+  #ano-toggle {
+    top: 55px; /* Ajuste a posição do botão "Ano" */
+    left: 130px;
+    font-size: 16px; /* Reduza o tamanho da fonte */
+    padding: 8px 16px; /* Reduza o padding */
+  }
+
+  #ano-conteudo {
+    top: 85px; /* Ajuste a posição do menu suspenso */
+    left: 100px;
+    width: 150px; /* Reduza a largura */
+  }
+
+  #ano-conteudo ul li a {
+    width: 100%; /* Ajuste a largura dos botões */
+    font-size: 14px; /* Reduza o tamanho da fonte */
+  }
+
+  .conteudo .periodo .titulo-interior h3 {
+    font-size: 28px; /* Reduza o tamanho da fonte */
+  }
+
+  .conteudo .periodo .titulo-interior p {
+    font-size: 16px; /* Reduza o tamanho da fonte */
+    left: 100px; /* Ajuste a posição */
+  }
+
+  .conteudo .periodo .titulo-interior span {
+    font-size: 12px; /* Reduza o tamanho da fonte */
+    top: 40px; /* Ajuste a posição */
+  }
+
+  .conteudo .disciplinas .titulo-interior h3 {
+    font-size: 22px; /* Reduza o tamanho da fonte */
+    margin-left: 10px; /* Ajuste a margem */
+  }
+
+  .conteudo .disciplinas .disciplinas-blocos .bloco a {
+    font-size: 16px; /* Reduza o tamanho da fonte */
+  }
+
+}
+}
+@media (max-width: 594px){
+  footer{
+    padding-left: 20px;
+  }
+}
